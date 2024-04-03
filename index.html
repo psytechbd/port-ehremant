@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Port-Ehremant</title>
+    <link rel="icon" type="image/x-icon" href="/images/Logo-Port-ehremant.png">
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <style>
+        .user-menu {
+    display: none;
+}
+
+.user-menu.active {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="bg-white">
+        <img class="m-auto" src="images/Logo-Port-ehremant.png" alt="">
+    </div>
+    <div class="bg-[#612B85] relative">
+        <h2 class="text-white text-xl font-bold py-4 text-center">Ehrenamtsnetzwerk</h2>
+        <div class="absolute flex right-6 top-4 gap-4">
+            <i class="fa-solid fa-bell text-white text-2xl cursor-pointer"></i>
+            <div class="bg-orange-500 p-1 rounded-full cursor-pointer">
+                <p id="user-icon" class="text-white">MH</p>
+            </div>
+        </div>
+    </div>
+    <div id="user-menu" class="user-menu bg-[#E6E5E6] w-[300px] text-black text-lg rounded-lg font-bold absolute right-6 p-4">
+        <div class="flex gap-2 items-center py-2">
+            <i class="fa-solid fa-user text-[#612B85] text-xl"></i>
+            <p class="">Mein Profil bearbeiten</p>
+        </div>
+        <div class="flex gap-2 items-center py-2">
+            <i class="fa-solid fa-user-plus text-[#612B85] text-xl"></i>
+            <p class="">Einen Freund einladen</p>
+        </div>
+        <div class="flex gap-2 items-center py-2">
+            <i class="fa-solid fa-door-open text-[#612B85] text-xl"></i>
+            <p class="">Abmelden</p>
+        </div>
+
+    </div>
+    <!-- header -->
+
+    <script>
+        document.getElementById('user-icon').addEventListener('click', function () {
+            document.getElementById('user-menu').classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>
